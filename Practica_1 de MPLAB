@@ -27,19 +27,19 @@ PSECT   MainCode,local,class=CODE,delta=2 ; PIC10/12/16
  
   BANKSEL TRISB  ;Selecciono el banco del purto "B" 
   BCF TRISB,0 ;Se coloca como salida el pin """"3"""
-  BANKSEL PORTB ;Envia la configuraci髇 del regisyro a la  configuraciones
+  BANKSEL PORTB ;Envia la configuraci贸n del regisyro a la  configuraciones
   
   BANKSEL TRISA  ;Selecciono el banco del purto "A" 
   BCF TRISA,1 ;Se coloca como salida el pin 
-  BANKSEL PORTA ;Envia la configuraci髇 del registra a la  configuraciones
+  BANKSEL PORTA ;Envia la configuraci贸n del registra a la  configuraciones
   
   BANKSEL TRISC  ;Selecciono el banco del purto "C" 
   BSF TRISC,0 ;Se coloca como entrada el pin 0 del puerto C
-  BANKSEL PORTC ;Envia la configuraci髇 del regisyro a la  configuraciones
+  BANKSEL PORTC ;Envia la configuraci贸n del regisyro a la  configuraciones
   
   BANKSEL TRISC  ;Selecciono el banco del purto "C" 
   BSF TRISC,1 ;Se coloca como entrada el pin 0 del puerto C
-  BANKSEL PORTC ;Envia la configuraci髇 del regisyro a la  configuraciones
+  BANKSEL PORTC ;Envia la configuraci贸n del regisyro a la  configuraciones
   
   MainLoop: ;Inicio de ciclo iterativo principal
     		
@@ -67,7 +67,7 @@ DELAY:
     
 DELAY_LOOP:  
     decfsz 0x10, F  ;decrementa el registro F y checa si no es 0
-    goto DELAY_LOOP ;Regresa el ciclo de espera hasta que este encuetre la condici髇
+    goto DELAY_LOOP ;Regresa el ciclo de espera hasta que este encuetre la condici贸n
     decfsz 0x11, F  ; 
     goto DELAY_LOOP
-END MAIN  ;Finaluiza la ejecuci髇 ddel programa
+END MAIN  ;Finaluiza la ejecuci贸n ddel programa
